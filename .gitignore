@@ -1,0 +1,23 @@
+# let's exclude everything
+/*
+
+
+#Global style & terminal
+!/.zshrc
+
+#Mindblowing tricks
+!/.config
+/.config/*
+!/.gitignore
+!/.gitconfig
+
+#Let's add some cool stuff
+!/.config/compton.conf
+!/.config/i3/
+!/.config/polybar/
+!/.config/rofi/
+!/.vimrc
+!/.vimrc.plug
+!/.vim/
+!/.xinitrc
+!/script/
