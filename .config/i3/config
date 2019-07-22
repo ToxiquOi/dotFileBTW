@@ -176,7 +176,7 @@ bindsym $sup+r mode "resize"
 #}
 
 #launch program
-bindsym $sup+w exec google-chrome-stable
+bindsym $sup+w exec qutebrowser
 bindsym $sup+d exec nautilus
 bindsym $sup+m exec evolution
 bindsym $sup+s exec steam
@@ -194,7 +194,7 @@ exec_always --no-startup-id nm-applet
 exec_always --no-startup-id blueman-applet
 
 #exec other
-bindsym $sup+l exec i3lock -f -i ~/Images/nier_wallpaper.png --indpos="700:405" --radius 116
+bindsym $sup+l exec slimlock
 exec --no-startup-id  compton -b
 exec_always --no-startup-id kdeconnect-indicator	
 exec setxkbmap fr
@@ -204,12 +204,15 @@ exec sudo ./script/disableGpe.sh
 
 
 #touchpad settings
-exec xinput set-prop 14 286 1
-exec xinput set-prop 14 304 1
-exec xinput set-prop 14 285 1
-exec xinput set-prop 14 303 1
+#exec xinput set-prop 14 289 1
+#exec xinput set-prop 14 307 1
+#exec xinput set-prop 14 286 1
+#exec xinput set-prop 14 304 1
+exec xinput set-prop 14 299 1
+exec xinput set-prop 14 317 1
 
 #gaps
+default_border pixel 2
 
 # set inner/outer gaps
 gaps inner 5
@@ -229,3 +232,8 @@ bindsym $sup+v scratchpad show
 #back and forth desktop
 bindsym $mod+Tab workspace back_and_forth
 
+#lock at startup
+exec slimlock
+
+#launch app on specific workspace
+#exec --no-startup-id i3-msg 'workspace 3; exec iceweasel; workspace 1'
